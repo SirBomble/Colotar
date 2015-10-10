@@ -56,7 +56,8 @@ Class Colotar
 			if (strlen($hash) != 6) { // If 6, hash is the border value, ignore it
 				$values   = $this->hex2rgb($hash);
 				$rgbcolor = imagecolorallocate($img, $values[0], $values[1], $values[2]);
-				imagefilledrectangle($img, 2 + (20 * $row), 2 + (20 * $column), 20 + (20 * $row), 20 + (20 * $column), $rgbcolor);
+				//Makes it loop pretty!
+				imagefilledrectangle($img, 4 + (40 * $row), 4 + (40 * $column), 40 + (40 * $row), 40 + (40 * $column), $rgbcolor);
 				$row++;
 				if ($row == 3) {
 					$row = 0;
