@@ -76,7 +76,7 @@ Class Colotar
 	public function getColotar($input)
 	{
 		if (!$input) {
-			die("No input string specified.");
+			die("No input string specified. Please try again.");
 		}
 		$this->hashify($input);
 		$this->generateColotar($input);
